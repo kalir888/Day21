@@ -6,38 +6,38 @@ public class UserRegistration {
     UserValidator userValidator = new UserValidator();
     Scanner get = new Scanner(System.in);
 
-    public void getUserDetails() {
+    public void getUserDetails() throws UserDetailException {
         getUserFirstName();
         getUserLastName();
         getUserEmailId();
         getPassWord();
     }
 
-    private void getUserFirstName() {
+    private void getUserFirstName() throws UserDetailException {
         System.out.println("Enter your First Name");
         String firstName = get.next();
         if(!userValidator.validateName(firstName))
-            System.out.println("Invalid First Name");
+            throw new UserDetailException("Invalid First Name");
     }
 
-    private void getUserLastName() {
-        System.out.println("Enter your Second Name");
+    private void getUserLastName() throws UserDetailException {
+        System.out.println("Enter your Last Name");
         String secondName = get.next();
-        if(!userValidator.validateName(secondName));
-            System.out.println("Invalid Second Name");
+        if(!userValidator.validateName(secondName))
+            throw new UserDetailException("Invalid Last Name");
     }
 
-    private void getUserEmailId() {
+    private void getUserEmailId() throws UserDetailException {
         System.out.println("Enter your Email Id");
         String emailId = get.next();
         if(!userValidator.validateEmailAddress(emailId))
-            System.out.println("Invalid Email Id");
+            throw new UserDetailException("Invalid Email Id");
     }
 
-    private void getPassWord() {
+    private void getPassWord() throws UserDetailException {
         System.out.println("Enter your PassWord");
         String passWord = get.next();
-        if(!userValidator.validateName(passWord))
-            System.out.println("Invalid PassWord");
+        if(!userValidator.validatePassword(passWord))
+            throw new UserDetailException("Invalid Password");
     }
 }
