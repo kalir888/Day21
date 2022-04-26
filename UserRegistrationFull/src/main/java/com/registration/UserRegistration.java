@@ -10,34 +10,32 @@ public class UserRegistration {
         getUserFirstName();
         getUserLastName();
         getUserEmailId();
+        getUserPhoneNo();
         getPassWord();
     }
 
     private void getUserFirstName() throws UserDetailException {
         System.out.println("Enter your First Name");
-        String firstName = get.next();
-        if(!userValidator.validateName(firstName))
-            throw new UserDetailException("Invalid First Name");
+        userValidator.validateName(get.next());
     }
 
     private void getUserLastName() throws UserDetailException {
         System.out.println("Enter your Last Name");
-        String secondName = get.next();
-        if(!userValidator.validateName(secondName))
-            throw new UserDetailException("Invalid Last Name");
+        userValidator.validateName(get.next());
+    }
+
+    private void getUserPhoneNo() throws UserDetailException {
+        System.out.println("Enter your Phone no");
+        userValidator.validatePhoneNo(get.next());
     }
 
     private void getUserEmailId() throws UserDetailException {
         System.out.println("Enter your Email Id");
-        String emailId = get.next();
-        if(!userValidator.validateEmailAddress(emailId))
-            throw new UserDetailException("Invalid Email Id");
+        userValidator.validateEmailAddress(get.next());
     }
 
     private void getPassWord() throws UserDetailException {
         System.out.println("Enter your PassWord");
-        String passWord = get.next();
-        if(!userValidator.validatePassword(passWord))
-            throw new UserDetailException("Invalid Password");
+        userValidator.validatePassword(get.next());
     }
 }

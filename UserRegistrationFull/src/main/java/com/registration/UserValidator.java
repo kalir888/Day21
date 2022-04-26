@@ -3,28 +3,33 @@ package com.registration;
 import java.util.regex.Pattern;
 
 public class UserValidator {
+
     private static final String NAME_PATTERN = "^([A-Z])([a-z]{2})([a-z]*)$";
     private static final String EMAIL_PATTERN = "^([a-z0-9]+)([.+_-]?[a-z0-9]+)?@([a-z0-9]+)(.[a-z]{2,4})?(.[a-z]{2,4})$";
     private static final String PHONE_NO_PATTERN = "^91 [0-9]{10}$";
     private static final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[A-Z])(?=[^!@#$%^&+=]*[!@#$%^&+=][^!@#$%^&+=]*$).{8}$";
 
-    public boolean validateName(String name) {
+    public void validateName(String name) throws UserDetailException {
         Pattern pattern = Pattern.compile(NAME_PATTERN);
-        return pattern.matcher(name).matches();
+        if(!pattern.matcher(name).matches())
+            throw new UserDetailException("Invalid Name");
     }
 
-    public boolean validateEmailAddress(String email) {
+    public void validateEmailAddress(String email) throws UserDetailException {
         Pattern pattern = Pattern.compile(EMAIL_PATTERN);
-        return pattern.matcher(email).matches();
+        if(!pattern.matcher(email).matches())
+            throw new UserDetailException("Invalid Email Id");
     }
 
-    public boolean validatePhoneNo(String number) {
+    public void validatePhoneNo(String number) throws UserDetailException {
         Pattern pattern = Pattern.compile(PHONE_NO_PATTERN);
-        return pattern.matcher(number).matches();
+        if(!pattern.matcher(number).matches())
+            throw new UserDetailException("Invalid Phone No");
     }
 
-    public boolean validatePassword(String passWord) {
+    public void validatePassword(String passWord) throws UserDetailException {
         Pattern pattern = Pattern.compile(PASSWORD_PATTERN);
-        return pattern.matcher(passWord).matches();
+        if(!pattern.matcher(passWord).matches())
+            throw new UserDetailException("Invalid Password");
     }
 }

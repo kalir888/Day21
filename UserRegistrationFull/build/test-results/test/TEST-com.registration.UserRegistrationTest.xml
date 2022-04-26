@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.registration.UserRegistrationTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2022-04-24T09:31:26" hostname="DESKTOP-2DPSHTI" time="0.268">
+<testsuite name="com.registration.UserRegistrationTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2022-04-26T07:08:04" hostname="DESKTOP-2DPSHTI" time="0.152">
   <properties/>
-  <testcase name="multipleEmail_WhenNotValid_ReturnFalse()" classname="com.registration.UserRegistrationTest" time="0.196"/>
-  <testcase name="multipleEmail_WhenValid_ReturnTrue()" classname="com.registration.UserRegistrationTest" time="0.007"/>
-  <testcase name="givenPhoneNo_WhenValid_ReturnTrue()" classname="com.registration.UserRegistrationTest" time="0.004"/>
-  <testcase name="givenName_WhenShort_ReturnFalse()" classname="com.registration.UserRegistrationTest" time="0.003"/>
-  <testcase name="givenEmail_WhenNotValid_ReturnFalse()" classname="com.registration.UserRegistrationTest" time="0.006"/>
-  <testcase name="givenPhoneNO_WhenNoCountryCode_ReturnFalse()" classname="com.registration.UserRegistrationTest" time="0.004"/>
-  <testcase name="givenEmail_WhenValid_ReturnTrue()" classname="com.registration.UserRegistrationTest" time="0.003"/>
-  <testcase name="givenPassWord_WhenValid_ReturnTrue()" classname="com.registration.UserRegistrationTest" time="0.004"/>
-  <testcase name="givenName_WhenValid_ReturnTrue()" classname="com.registration.UserRegistrationTest" time="0.003"/>
-  <testcase name="givenPassWord_WhenHaveMoreCharacters_ReturnFalse()" classname="com.registration.UserRegistrationTest" time="0.004"/>
+  <testcase name="multipleEmail_WhenValid_NotThrowException()" classname="com.registration.UserRegistrationTest" time="0.083"/>
+  <testcase name="givenEmail_WhenNotValid_ThrowMyCustomException()" classname="com.registration.UserRegistrationTest" time="0.011"/>
+  <testcase name="givenName_WhenShort_ThrowMyCustomException()" classname="com.registration.UserRegistrationTest" time="0.005"/>
+  <testcase name="givenPassWord_WhenValid_NotThrowException()" classname="com.registration.UserRegistrationTest" time="0.005"/>
+  <testcase name="givenEmail_WhenValid_NotThrowException()" classname="com.registration.UserRegistrationTest" time="0.004"/>
+  <testcase name="multipleEmail_WhenNotValid_ThrowMyCustomException()" classname="com.registration.UserRegistrationTest" time="0.01"/>
+  <testcase name="givenName_WhenValid_NotThrowException()" classname="com.registration.UserRegistrationTest" time="0.004"/>
+  <testcase name="givenPhoneNO_WhenNoCountryCode_ThrowMyCustomException()" classname="com.registration.UserRegistrationTest" time="0.004"/>
+  <testcase name="givenPassWord_WhenHaveMoreCharacters_ThrowMyCustomException()" classname="com.registration.UserRegistrationTest" time="0.003"/>
+  <testcase name="givenPhoneNo_WhenValid_NotThrowException()" classname="com.registration.UserRegistrationTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
